@@ -14,6 +14,7 @@ import {MatListModule, MatTableModule} from '@angular/material';
 import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
+import { PlayersComponent } from './players/players.component';
 
 
 
@@ -21,7 +22,8 @@ import {AngularFirestoreModule} from 'angularfire2/firestore';
   declarations: [
     AppComponent,
     ScoreCardComponent,
-    HomePageComponent
+    HomePageComponent,
+    PlayersComponent
   ],
   imports: [
     BrowserModule,
