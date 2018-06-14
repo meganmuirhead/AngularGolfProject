@@ -15,6 +15,7 @@ import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import { PlayersComponent } from './players/players.component';
+import {CourseService} from './course.service';
 
 
 
@@ -39,7 +40,7 @@ import { PlayersComponent } from './players/players.component';
     AngularFirestoreModule,
     MatTableModule
   ],
-  providers: [],
+  providers: [CourseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
