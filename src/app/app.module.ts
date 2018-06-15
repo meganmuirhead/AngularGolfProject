@@ -16,6 +16,7 @@ import {environment} from '../environments/environment';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import { PlayersComponent } from './players/players.component';
 import {CourseService} from './course.service';
+import { HttpClientModule} from '@angular/common/http';
 
 
 
@@ -38,7 +39,8 @@ import {CourseService} from './course.service';
     MatSelectModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]

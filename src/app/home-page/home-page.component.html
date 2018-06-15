@@ -2,17 +2,9 @@
   <h1>Welcome</h1>
   <h3>Please select course!</h3>
   <div class="courses">
-    <div class="course">
-      <img src="/assets/thanksgiving.jpg" width="400px" height="600px" alt="Thanksgiving Golf Course">
-      <a routerLink="/score-card/3"><button mat-raised-button>Select Course!</button></a>
-    </div>
-    <div class="course">
-      <img src="/assets/foxhollow.jpg" width="400px" height="600px" alt="Fox Hollow Golf Course">
-      <a routerLink="score-card/2"><button mat-raised-button>Select Course!</button></a>
-    </div>
-    <div class="course">
-      <img src="../../assets/spanishoaks.jpg" width="400px" height="600px" alt="Spanish Oaks">
-      <a routerLink="score-card/1"><button mat-raised-button>Select Course!</button></a>
+    <div *ngFor="let course of courseObservable | async" class="course">
+      {{course.name }}
+      <a routerLink="/score-card/{{course.id}}"><img src="{{ course.image }}" width="400px" height="600px" alt="{{ course.name }}"></a>
     </div>
   </div>
 </div>
