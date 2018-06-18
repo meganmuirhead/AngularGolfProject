@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {CourseService} from '../course.service';
 
 
 @Component({
@@ -8,14 +9,32 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./score-card.component.less']
 })
 export class ScoreCardComponent implements OnInit {
-  constructor(private route: ActivatedRoute) { }
+
+  courseInfo: any;
+  teeSelected: string;
+
+  parvalue = [
+    {value: 'pro', viewValue: 'Pro'},
+    {value: 'champion', viewValue: 'Champion'},
+    {value: 'male', viewValue: 'Male'},
+    {value: 'female', viewValue: 'Female'},
+
+  ];
+
+  constructor(private route: ActivatedRoute, private courseService: CourseService) {
+  }
 
   ngOnInit() {
-    this.route.params.subscribe(
+    this.courseInfo = this.route.params.subscribe(
       params => {
-        console.log(params)
+        console.log(params);
+        this.courseService.getCourseInfo(params['id']).subscribe(
+          response => {
+            console.log(response);
+          }
+        );
       }
-    )
+    );
   }
 
 }

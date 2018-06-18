@@ -10,7 +10,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './material.module';
 import {MatDividerModule} from '@angular/material/divider';
-import {MatListModule, MatTableModule} from '@angular/material';
+import {MatFormFieldModule, MatListModule, MatMenuModule, MatTableModule} from '@angular/material';
 import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
@@ -40,7 +40,9 @@ import { HttpClientModule} from '@angular/common/http';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule,
+    MatFormFieldModule
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]

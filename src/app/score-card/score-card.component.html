@@ -39,7 +39,16 @@
     <td><mat-card>Out</mat-card></td>
   </tr>
   <tr>
-    <td><mat-card>Selet Lvl</mat-card></td>
+    <td>
+      <mat-card>
+          <select placeholder="Favorite food">
+            <option *ngFor="let par of parvalue" [value]="parvalue.value">
+              {{ par.viewValue }}
+            </option>
+          </select>
+      </mat-card>
+
+    </td>
     <td><mat-card>1</mat-card></td>
     <td><mat-card>2</mat-card></td>
     <td><mat-card>3</mat-card></td>
