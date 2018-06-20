@@ -14,50 +14,26 @@
   </tr>
   <tr>
     <td><mat-card>Par</mat-card></td>
-    <td><mat-card>1</mat-card></td>
-    <td><mat-card>2</mat-card></td>
-    <td><mat-card>3</mat-card></td>
-    <td><mat-card>4</mat-card></td>
-    <td><mat-card>5</mat-card></td>
-    <td><mat-card>6</mat-card></td>
-    <td><mat-card>7</mat-card></td>
-    <td><mat-card>8</mat-card></td>
-    <td><mat-card>9</mat-card></td>
+    <td *ngFor="let val of parArray | slice:0:9"><mat-card>{{val}}</mat-card></td>
     <td><mat-card>Out</mat-card></td>
   </tr>
   <tr>
     <td><mat-card>Handicap</mat-card></td>
-    <td><mat-card>1</mat-card></td>
-    <td><mat-card>2</mat-card></td>
-    <td><mat-card>3</mat-card></td>
-    <td><mat-card>4</mat-card></td>
-    <td><mat-card>5</mat-card></td>
-    <td><mat-card>6</mat-card></td>
-    <td><mat-card>7</mat-card></td>
-    <td><mat-card>8</mat-card></td>
-    <td><mat-card>9</mat-card></td>
+    <td *ngFor="let val of handicapArray | slice:0:9"><mat-card>{{val}}</mat-card></td>
     <td><mat-card>Out</mat-card></td>
   </tr>
   <tr>
     <td>
       <mat-card>
-          <select placeholder="Favorite food">
-            <option *ngFor="let par of parvalue" [value]="parvalue.value">
+          <select [(ngModel)]="teeSelected" placeholder="Select Tee" (change)="teeLevel()">
+            <option *ngFor="let par of parvalue" [value]="par.value">
               {{ par.viewValue }}
             </option>
           </select>
       </mat-card>
 
     </td>
-    <td><mat-card>1</mat-card></td>
-    <td><mat-card>2</mat-card></td>
-    <td><mat-card>3</mat-card></td>
-    <td><mat-card>4</mat-card></td>
-    <td><mat-card>5</mat-card></td>
-    <td><mat-card>6</mat-card></td>
-    <td><mat-card>7</mat-card></td>
-    <td><mat-card>8</mat-card></td>
-    <td><mat-card>9</mat-card></td>
+    <td *ngFor="let val of yardageArray | slice:0:9"><mat-card>{{val}}</mat-card></td>
     <td><mat-card>Out</mat-card></td>
   </tr>
   <tr>
@@ -140,41 +116,17 @@
   </tr>
   <tr>
     <td><mat-card>Par</mat-card></td>
-    <td><mat-card>1</mat-card></td>
-    <td><mat-card>2</mat-card></td>
-    <td><mat-card>3</mat-card></td>
-    <td><mat-card>4</mat-card></td>
-    <td><mat-card>5</mat-card></td>
-    <td><mat-card>6</mat-card></td>
-    <td><mat-card>7</mat-card></td>
-    <td><mat-card>8</mat-card></td>
-    <td><mat-card>9</mat-card></td>
+    <td *ngFor="let val of parArray | slice:9"><mat-card>{{val}}</mat-card></td>
     <td><mat-card>Out</mat-card></td>
   </tr>
   <tr>
     <td><mat-card>Handicap</mat-card></td>
-    <td><mat-card>1</mat-card></td>
-    <td><mat-card>2</mat-card></td>
-    <td><mat-card>3</mat-card></td>
-    <td><mat-card>4</mat-card></td>
-    <td><mat-card>5</mat-card></td>
-    <td><mat-card>6</mat-card></td>
-    <td><mat-card>7</mat-card></td>
-    <td><mat-card>8</mat-card></td>
-    <td><mat-card>9</mat-card></td>
+    <td *ngFor="let val of handicapArray | slice:9"><mat-card>{{val}}</mat-card></td>
     <td><mat-card>Out</mat-card></td>
   </tr>
   <tr>
-    <td><mat-card>Selet Lvl</mat-card></td>
-    <td><mat-card>1</mat-card></td>
-    <td><mat-card>2</mat-card></td>
-    <td><mat-card>3</mat-card></td>
-    <td><mat-card>4</mat-card></td>
-    <td><mat-card>5</mat-card></td>
-    <td><mat-card>6</mat-card></td>
-    <td><mat-card>7</mat-card></td>
-    <td><mat-card>8</mat-card></td>
-    <td><mat-card>9</mat-card></td>
+    <td><mat-card>{{teeSelected}}</mat-card></td>
+    <td *ngFor="let val of yardageArray | slice:9"><mat-card>{{val}}</mat-card></td>
     <td><mat-card>Out</mat-card></td>
   </tr>
   <tr>

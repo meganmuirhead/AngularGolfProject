@@ -17,6 +17,7 @@ import {AngularFirestoreModule} from 'angularfire2/firestore';
 import { PlayersComponent } from './players/players.component';
 import {CourseService} from './course.service';
 import { HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 
 
@@ -42,7 +43,8 @@ import { HttpClientModule} from '@angular/common/http';
     MatTableModule,
     HttpClientModule,
     MatMenuModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]
