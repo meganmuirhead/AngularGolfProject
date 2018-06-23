@@ -12,6 +12,8 @@ export class ScoreCardComponent implements OnInit {
 
   courseInfo: any;
   teeSelected: string;
+  value = 'Clear me';
+
 
   parArray: string[] = [];
   handicapArray: Array<string> = [];

@@ -18,6 +18,9 @@ import { PlayersComponent } from './players/players.component';
 import {CourseService} from './course.service';
 import { HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { NamePipe } from './name.pipe';
+import {MatInputModule} from '@angular/material/input';
+
 
 
 
@@ -26,7 +29,8 @@ import {FormsModule} from '@angular/forms';
     AppComponent,
     ScoreCardComponent,
     HomePageComponent,
-    PlayersComponent
+    PlayersComponent,
+    NamePipe
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,8 @@ import {FormsModule} from '@angular/forms';
     HttpClientModule,
     MatMenuModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatInputModule
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]
