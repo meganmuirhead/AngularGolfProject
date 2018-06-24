@@ -10,17 +10,23 @@
     <td><mat-card>7</mat-card></td>
     <td><mat-card>8</mat-card></td>
     <td><mat-card>9</mat-card></td>
-    <td><mat-card>Out</mat-card></td>
+    <td><mat-card>Ya In's M8</mat-card></td>
+    <td><mat-card>You Golf This :)</mat-card></td>
+
   </tr>
   <tr>
     <td><mat-card>Par</mat-card></td>
     <td *ngFor="let val of parArray | slice:0:9"><mat-card>{{val}}</mat-card></td>
-    <td><mat-card>Out</mat-card></td>
+    <td><mat-card>In</mat-card></td>
+    <td><mat-card>Get it?</mat-card></td>
+
   </tr>
   <tr>
     <td><mat-card>Handicap</mat-card></td>
     <td *ngFor="let val of handicapArray | slice:0:9"><mat-card>{{val}}</mat-card></td>
-    <td><mat-card>Out</mat-card></td>
+    <td><mat-card>In</mat-card></td>
+    <td><mat-card>WOoooW</mat-card></td>
+
   </tr>
   <tr>
     <td>
@@ -34,7 +40,9 @@
 
     </td>
     <td *ngFor="let val of yardageArray | slice:0:9"><mat-card>{{val}}</mat-card></td>
-    <td><mat-card>Out</mat-card></td>
+    <td><mat-card>In</mat-card></td>
+    <td><mat-card>I'm</mat-card></td>
+
   </tr>
   <tr>
     <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
@@ -48,6 +56,8 @@
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 8)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 9)"></mat-card></td>
     <td><mat-card>In total: {{ userData['player' + 1].scores.inTotal }}</mat-card></td>
+    <td><mat-card>So</mat-card></td>
+
   </tr>
   <tr>
     <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
@@ -60,7 +70,9 @@
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 7)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 8)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 9)"></mat-card></td>
-    <td><mat-card>{{ userData['player' + 2].scores.inTotal }}</mat-card></td>
+    <td><mat-card>In total: {{ userData['player' + 2].scores.inTotal }}</mat-card></td>
+    <td><mat-card>Funny</mat-card></td>
+
   </tr>
   <tr>
     <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
@@ -73,7 +85,9 @@
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 7)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 8)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 9)"></mat-card></td>
-    <td><mat-card>{{ userData['player' + 3].scores.inTotal }}</mat-card></td>
+    <td><mat-card>In total: {{ userData['player' + 3].scores.inTotal }}</mat-card></td>
+    <td><mat-card>FYI</mat-card></td>
+
   </tr>
   <tr>
     <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
@@ -86,22 +100,30 @@
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 7)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 8)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 9)"></mat-card></td>
-    <td><mat-card>{{ userData['player' + 4].scores.inTotal }}</mat-card></td>
+    <td><mat-card>In total: {{ userData['player' + 4].scores.inTotal }}</mat-card></td>
+    <td><mat-card>In case</mat-card></td>
+
   </tr>
   <tr>
     <td><mat-card>Par</mat-card></td>
     <td *ngFor="let val of parArray | slice:9"><mat-card>{{val}}</mat-card></td>
     <td><mat-card>Out</mat-card></td>
+    <td><mat-card>You</mat-card></td>
+
   </tr>
   <tr>
     <td><mat-card>Handicap</mat-card></td>
     <td *ngFor="let val of handicapArray | slice:9"><mat-card>{{val}}</mat-card></td>
     <td><mat-card>Out</mat-card></td>
+    <td><mat-card>Didn't</mat-card></td>
+
   </tr>
   <tr>
     <td><mat-card>{{teeSelected}}</mat-card></td>
     <td *ngFor="let val of yardageArray | slice:9"><mat-card>{{val}}</mat-card></td>
     <td><mat-card>Out</mat-card></td>
+    <td><mat-card>Know</mat-card></td>
+
   </tr>
   <tr>
     <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
