@@ -1,6 +1,6 @@
-import {HoleInfoModel} from './hole-info.model';
+import { HoleInfoModel } from './hole-info.model';
 
 export class PlayerInfoModel {
  name: string;
- scores: HoleInfoModel;
+ scores: HoleInfoModel = new HoleInfoModel();
 }

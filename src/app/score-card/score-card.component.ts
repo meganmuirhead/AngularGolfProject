@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {CourseService} from '../course.service';
+import {UserDataModel} from '../user-data.model';
 
 
 @Component({
@@ -13,6 +14,7 @@ export class ScoreCardComponent implements OnInit {
   courseInfo: any;
   teeSelected: string;
   playerInfo: {1: string};
+  userData: UserDataModel;
 
 
 
@@ -29,6 +31,7 @@ export class ScoreCardComponent implements OnInit {
   ];
 
   constructor(private route: ActivatedRoute, private courseService: CourseService) {
+    this.userData = new UserDataModel();
   }
 
   ngOnInit() {
@@ -66,8 +69,9 @@ export class ScoreCardComponent implements OnInit {
     console.log(this.handicapArray[9]);
     console.log(this.yardageArray[9]);
   }
-  scoreUpdate(event, playerNumber) {
 
-
+  scoreUpdate(event, playerNumber, holeNumber) {
+    let input = +event.target.value;
+    this.userData['player' + playerNumber].scores['hole' + holeNumber] = input;
   }
 }

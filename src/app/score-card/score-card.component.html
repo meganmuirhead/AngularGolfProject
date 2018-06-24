@@ -38,55 +38,55 @@
   </tr>
   <tr>
     <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card>Out</mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 1)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 2)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 3)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 4)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 5)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 6)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 7)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 8)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 9)"></mat-card></td>
+    <td><mat-card>In total: {{ userData['player' + 1].scores.inTotal }}</mat-card></td>
   </tr>
   <tr>
     <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card>Out</mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 1)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 2)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 3)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 4)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 5)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 6)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 7)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 8)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 9)"></mat-card></td>
+    <td><mat-card>{{ userData['player' + 2].scores.inTotal }}</mat-card></td>
   </tr>
   <tr>
     <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card>Out</mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 1)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 2)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 3)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 4)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 5)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 6)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 7)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 8)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 9)"></mat-card></td>
+    <td><mat-card>{{ userData['player' + 3].scores.inTotal }}</mat-card></td>
   </tr>
   <tr>
     <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card>Out</mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 1)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 2)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 3)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 4)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 5)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 6)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 7)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 8)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 9)"></mat-card></td>
+    <td><mat-card>{{ userData['player' + 4].scores.inTotal }}</mat-card></td>
   </tr>
   <tr>
     <td><mat-card>Par</mat-card></td>
@@ -104,56 +104,61 @@
     <td><mat-card>Out</mat-card></td>
   </tr>
   <tr>
-    <td><mat-card><input maxlength="20" size="10" placeholder="Name" (change)="scoreUpdate($event, 1)"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1)"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1)"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1)"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1)"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1)"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1)"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1)"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1)"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1)"></mat-card></td>
-    <td><mat-card>Out</mat-card></td>
+    <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 10)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 11)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 12)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 13)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 14)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 15)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 16)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 17)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 18)"></mat-card></td>
+    <td><mat-card>{{ userData['player' + 1].scores.outTotal }}</mat-card></td>
+    <td><mat-card>Grand Total: {{ userData['player' + 1].scores.grandTotal }}</mat-card></td>
+
   </tr>
   <tr>
     <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card>Out</mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 10)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 11)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 12)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 13)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 14)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 15)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 16)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 17)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 18)"></mat-card></td>
+    <td><mat-card>{{ userData['player' + 2].scores.outTotal }}</mat-card></td>
+    <td><mat-card>Grand Total: {{ userData['player' + 2].scores.grandTotal }}</mat-card></td>
   </tr>
   <tr>
     <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card>Out</mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 10)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 11)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 12)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 13)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 14)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 15)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 16)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 17)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 18)"></mat-card></td>
+    <td><mat-card>{{ userData['player' + 3].scores.outTotal }}</mat-card></td>
+    <td><mat-card>Grand Total: {{ userData['player' + 3].scores.grandTotal }}</mat-card></td>
   </tr>
   <tr>
     <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card><input maxlength="5" size="5" placeholder="Score"></mat-card></td>
-    <td><mat-card>Out</mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 10)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 11)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 12)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 13)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 14)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 15)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 16)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 17)"></mat-card></td>
+    <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 18)"></mat-card></td>
+    <td><mat-card>{{ userData['player' + 4].scores.outTotal }}</mat-card></td>
+    <td><mat-card>Grand Total: {{ userData['player' + 4].scores.grandTotal }}</mat-card></td>
   </tr>
 
 </table>
