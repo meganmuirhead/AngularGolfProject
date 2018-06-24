@@ -12,7 +12,8 @@ export class ScoreCardComponent implements OnInit {
 
   courseInfo: any;
   teeSelected: string;
-  value = 'Clear me';
+  playerInfo: {1: string};
+
 
 
   parArray: string[] = [];
@@ -65,5 +66,8 @@ export class ScoreCardComponent implements OnInit {
     console.log(this.handicapArray[9]);
     console.log(this.yardageArray[9]);
   }
+  scoreUpdate(event, playerNumber) {
 
+
+  }
 }
