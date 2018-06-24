@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {AngularFirestore} from 'angularfire2/firestore';
+import {AngularFireDatabase} from 'angularfire2/database';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,12 @@ import {AngularFirestore} from 'angularfire2/firestore';
 })
 
 export class AppComponent {
-  title = 'app';
+  playerName: any[];
 
-  constructor(db: AngularFirestore) {
-
+  constructor( db: AngularFireDatabase ) {
+    db.list('/PlayerName').subscribe(playerName => {
+      this.playerName = playerName;
+      console.log(this.playerName);
+      })
   }
 }

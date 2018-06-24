@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyDNxKR7KzoAe3JG-KCfrUOHLYsaXWCMHRs',
-    authDomain: 'golf-b403f.firebaseapp.com',
-    databaseURL: 'https://golf-b403f.firebaseio.com',
-    projectId: 'golf-b403f',
-    storageBucket: 'golf-b403f.appspot.com',
-    messagingSenderId: '300242080827'
+    apiKey: "AIzaSyDNxKR7KzoAe3JG-KCfrUOHLYsaXWCMHRs",
+    authDomain: "golf-b403f.firebaseapp.com",
+    databaseURL: "https://golf-b403f.firebaseio.com",
+    projectId: "golf-b403f",
+    storageBucket: "golf-b403f.appspot.com",
+    messagingSenderId: "300242080827"
   }
 };
 
