@@ -1,5 +1,13 @@
 <table>
   <tr>
+
+
+    <mat-card *ngFor=" let player of players | async">
+      {{player.name}}
+    </mat-card>
+
+
+    
     <td><mat-card>Hole</mat-card></td>
     <td><mat-card>1</mat-card></td>
     <td><mat-card>2</mat-card></td>
@@ -31,11 +39,11 @@
   <tr>
     <td>
       <mat-card>
-          <select [(ngModel)]="teeSelected" placeholder="Select Tee" (change)="teeLevel()">
-            <option *ngFor="let par of parvalue" [value]="par.value">
-              {{ par.viewValue }}
-            </option>
-          </select>
+        <select [(ngModel)]="teeSelected" placeholder="Select Tee" (change)="teeLevel()">
+          <option *ngFor="let par of parvalue" [value]="par.value">
+            {{ par.viewValue }}
+          </option>
+        </select>
       </mat-card>
 
     </td>
@@ -45,7 +53,9 @@
 
   </tr>
   <tr>
-    <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
+    <td><mat-card><input maxlength="20" size="10" [(ngModel)]="userData.player1.name" placeholder="Name">
+      <div>{{ userData.player1.name | name: userData: '1' }}</div>
+    </mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 1)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 2)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 3)"></mat-card></td>
@@ -60,7 +70,9 @@
 
   </tr>
   <tr>
-    <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
+    <td><mat-card><input maxlength="20" size="10" [(ngModel)]="userData.player2.name" placeholder="Name">
+      <div>{{ userData.player2.name | name: userData: '2' }}</div>
+    </mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 1)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 2)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 3)"></mat-card></td>
@@ -75,7 +87,9 @@
 
   </tr>
   <tr>
-    <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
+    <td><mat-card><input maxlength="20" size="10" [(ngModel)]="userData.player3.name" placeholder="Name">
+      <div>{{ userData.player3.name | name: userData: '3' }}</div>
+    </mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 1)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 2)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 3)"></mat-card></td>
@@ -90,7 +104,9 @@
 
   </tr>
   <tr>
-    <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
+    <td><mat-card><input maxlength="20" size="10" [(ngModel)]="userData.player4.name" placeholder="Name">
+      <div>{{ userData.player4.name | name: userData: '4' }}</div>
+    </mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 1)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 2)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 3)"></mat-card></td>
@@ -126,7 +142,9 @@
 
   </tr>
   <tr>
-    <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
+    <td><mat-card [(ngModel)]="userData.player1.name" placeholder="Name">
+      <div>{{ userData.player1.name | name: userData: '1' }}</div>
+    </mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 10)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 11)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 1, 12)"></mat-card></td>
@@ -141,7 +159,9 @@
 
   </tr>
   <tr>
-    <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
+    <td><mat-card [(ngModel)]="userData.player2.name" placeholder="Name">
+      <div>{{ userData.player2.name | name: userData: '2' }}</div>
+    </mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 10)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 11)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 2, 12)"></mat-card></td>
@@ -155,7 +175,9 @@
     <td><mat-card>Grand Total: {{ userData['player' + 2].scores.grandTotal }}</mat-card></td>
   </tr>
   <tr>
-    <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
+    <td><mat-card [(ngModel)]="userData.player3.name" placeholder="Name">
+      <div>{{ userData.player3.name | name: userData: '3' }}</div>
+    </mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 10)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 11)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 3, 12)"></mat-card></td>
@@ -169,7 +191,9 @@
     <td><mat-card>Grand Total: {{ userData['player' + 3].scores.grandTotal }}</mat-card></td>
   </tr>
   <tr>
-    <td><mat-card><input maxlength="20" size="10" placeholder="Name"></mat-card></td>
+    <td><mat-card [(ngModel)]="userData.player4.name" placeholder="Name">
+      <div>{{ userData.player4.name | name: userData: '4' }}</div>
+    </mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 10)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 11)"></mat-card></td>
     <td><mat-card><input maxlength="5" size="5" placeholder="Score" (change)="scoreUpdate($event, 4, 12)"></mat-card></td>

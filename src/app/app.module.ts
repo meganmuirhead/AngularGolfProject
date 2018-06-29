@@ -13,7 +13,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule, MatListModule, MatMenuModule, MatTableModule } from '@angular/material';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFirestoreModule} from 'angularfire2/firestore';
 import { PlayersComponent } from './players/players.component';
 import { CourseService } from './course.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -21,7 +21,6 @@ import { FormsModule} from '@angular/forms';
 import { NamePipe } from './name.pipe';
 import { MatInputModule } from '@angular/material/input';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
-
 
 
 
@@ -51,7 +50,8 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    // AngularFirestoreCollection
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]

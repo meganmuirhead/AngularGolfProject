@@ -1,7 +1,21 @@
+
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {CourseService} from '../course.service';
 import {UserDataModel} from '../user-data.model';
+import { Observable } from 'rxjs';
+import {AngularFirestore, AngularFirestoreCollection} from 'angularfire2/firestore'
+import { map} from 'rxjs/operators';
+
+
+export interface Player {
+  name: string;
+
+}
+
+export interface PlayerId extends Player {
+  id: string;
+}
 
 
 @Component({
@@ -22,6 +36,8 @@ export class ScoreCardComponent implements OnInit {
   handicapArray: Array<string> = [];
   yardageArray: Array<string> = [];
 
+
+
   parvalue = [
     {value: 'pro', viewValue: 'Pro'},
     {value: 'champion', viewValue: 'Champion'},
@@ -29,19 +45,33 @@ export class ScoreCardComponent implements OnInit {
     {value: 'women', viewValue: 'Female'},
 
   ];
+  private playerCollection:AngularFirestoreCollection<Player>;
 
-  constructor(private route: ActivatedRoute, private courseService: CourseService) {
+  players: Observable<any>;
+
+  constructor(private route: ActivatedRoute, private courseService: CourseService, db: AngularFirestore) {
     this.userData = new UserDataModel();
+    this.playerCollection = db.collection<Player>('PlayersName');
+    // this.playerCollection = db.collection<Player>('PlayersName').valueChanges();
+
+
+    this.players = this.playerCollection.snapshotChanges().pipe(
+      map(actions => actions.map(a => {
+        const data = a.payload.doc.data() as Player;
+        const id = a.payload.doc.id;
+        return { id, ...data };
+      }))
+    );
+
   }
 
   ngOnInit() {
     this.teeSelected = 'women';
     this.courseInfo = this.route.params.subscribe(
       params => {
-        console.log(params);
+
         this.courseService.getCourseInfo(params['id']).subscribe(
           response => {
-            console.log(response);
             this.courseInfo = response;
             this.parseData();
           }
@@ -66,8 +96,7 @@ export class ScoreCardComponent implements OnInit {
       this.handicapArray[i] = tee.hcp;
       this.yardageArray[i] = tee.yards;
     }
-    console.log(this.handicapArray[9]);
-    console.log(this.yardageArray[9]);
+
   }
 
   scoreUpdate(event, playerNumber, holeNumber) {

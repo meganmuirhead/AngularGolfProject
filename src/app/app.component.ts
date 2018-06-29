@@ -11,10 +11,7 @@ import {AngularFireDatabase} from 'angularfire2/database';
 export class AppComponent {
   playerName: any[];
 
-  constructor( db: AngularFireDatabase ) {
-    db.list('/PlayerName').subscribe(playerName => {
-      this.playerName = playerName;
-      console.log(this.playerName);
-      })
+  constructor(db: AngularFireDatabase) {
+
   }
 }
