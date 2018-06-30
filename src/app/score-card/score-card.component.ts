@@ -24,7 +24,7 @@ export interface PlayerId extends Player {
   styleUrls: ['./score-card.component.less']
 })
 export class ScoreCardComponent implements OnInit {
-
+  player: any;
   courseInfo: any;
   teeSelected: string;
   playerInfo: {1: string};
@@ -49,9 +49,9 @@ export class ScoreCardComponent implements OnInit {
 
   players: Observable<any>;
 
-  constructor(private route: ActivatedRoute, private courseService: CourseService, db: AngularFirestore) {
+  constructor(private route: ActivatedRoute, private courseService: CourseService, afd: AngularFirestore) {
     this.userData = new UserDataModel();
-    this.playerCollection = db.collection<Player>('PlayersName');
+    this.playerCollection = afd.collection<Player>('PlayersName');
     // this.playerCollection = db.collection<Player>('PlayersName').valueChanges();
 
 
@@ -103,4 +103,7 @@ export class ScoreCardComponent implements OnInit {
     let input = +event.target.value;
     this.userData['player' + playerNumber].scores['hole' + holeNumber] = input;
   }
+  // onSave(){
+  //   this.playerCollection.doc(this.player.name).set(this.player);
+  // }
 }

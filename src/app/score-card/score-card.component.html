@@ -2,12 +2,17 @@
   <tr>
 
 
-    <mat-card *ngFor=" let player of players | async">
-      {{player.name}}
+    <mat-card *ngFor=" let player of players | async"  >
+      {{ player.name }}
+
     </mat-card>
+    <!--<mat-card>    <input matInput placeholder="name here" [(ngModel)] = "player.name" > <button (click)="onSave()"> </button>-->
+
+    <!--</mat-card>-->
 
 
-    
+
+
     <td><mat-card>Hole</mat-card></td>
     <td><mat-card>1</mat-card></td>
     <td><mat-card>2</mat-card></td>
