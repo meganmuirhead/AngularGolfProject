@@ -65,6 +65,9 @@ export class ScoreCardComponent implements OnInit {
 
   }
 
+  // onSave(){
+  //   this.playerCollection.doc(this.player.name).set(this.player);
+  // }
   ngOnInit() {
     this.teeSelected = 'women';
     this.courseInfo = this.route.params.subscribe(
@@ -103,7 +106,5 @@ export class ScoreCardComponent implements OnInit {
     let input = +event.target.value;
     this.userData['player' + playerNumber].scores['hole' + holeNumber] = input;
   }
-  // onSave(){
-  //   this.playerCollection.doc(this.player.name).set(this.player);
-  // }
+
 }
