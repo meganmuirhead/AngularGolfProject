@@ -19,27 +19,5 @@ export class HoleInfoModel {
   hole17: number = 0;
   hole18: number = 0;
 
-  get grandTotal(): number {
-    let total = 0;
-    for (let i = 1; i <= 18; i++) {
-      total += this['hole' + i];
-    }
-    return total;
-  }
 
-  get inTotal(): number {
-    let total = 0;
-    for (let i = 1; i <= 9; i++) {
-      total += this['hole' + i];
-    }
-    return total;
-  }
-
-  get outTotal(): number {
-    let total = 0;
-    for (let i = 10; i <= 18; i++) {
-      total += this['hole' + i];
-    }
-    return total;
-  }
 }

@@ -1,11 +1,12 @@
 
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {CourseService} from '../course.service';
+import { CourseService } from '../course.service';
 import {UserDataModel} from '../user-data.model';
 import { Observable } from 'rxjs';
 import {AngularFirestore, AngularFirestoreCollection} from 'angularfire2/firestore'
 import { map} from 'rxjs/operators';
+import {UsePipeDecoratorRule} from 'codelyzer';
 
 
 export interface Player {
@@ -45,29 +46,29 @@ export class ScoreCardComponent implements OnInit {
     {value: 'women', viewValue: 'Female'},
 
   ];
-  private playerCollection:AngularFirestoreCollection<Player>;
-
-  players: Observable<any>;
+  private playerCollection:AngularFirestoreCollection<UserDataModel>;
 
   constructor(private route: ActivatedRoute, private courseService: CourseService, afd: AngularFirestore) {
     this.userData = new UserDataModel();
-    this.playerCollection = afd.collection<Player>('PlayersName');
+    this.playerCollection = afd.collection<any>('PlayersName');
     // this.playerCollection = db.collection<Player>('PlayersName').valueChanges();
 
 
-    this.players = this.playerCollection.snapshotChanges().pipe(
-      map(actions => actions.map(a => {
-        const data = a.payload.doc.data() as Player;
-        const id = a.payload.doc.id;
-        return { id, ...data };
-      }))
-    );
+    this.playerCollection.snapshotChanges()
+      .subscribe(d => {
+        console.log('d', d);
+        this.userData = d[0].payload.doc.data();
+      })
+    ;
 
   }
 
-  // onSave(){
-  //   this.playerCollection.doc(this.player.name).set(this.player);
-  // }
+
+
+  saveScore() {
+    let json = JSON.stringify(this.userData);
+    this.playerCollection.doc('hi').set(JSON.parse(json));
+  }
   ngOnInit() {
     this.teeSelected = 'women';
     this.courseInfo = this.route.params.subscribe(
@@ -106,5 +107,30 @@ export class ScoreCardComponent implements OnInit {
     let input = +event.target.value;
     this.userData['player' + playerNumber].scores['hole' + holeNumber] = input;
   }
+
+  grandTotal(playerNumber: number): number {
+    let total = 0;
+    for (let i = 1; i <= 18; i++) {
+      total += this.userData['player' + playerNumber].scores['hole' + i];
+    }
+    return total;
+  }
+
+  inTotal(playerNumber: number): number {
+    let total = 0;
+    for (let i = 1; i <= 9; i++) {
+      total += this.userData['player' + playerNumber].scores['hole' + i];
+    }
+    return total;
+  }
+
+  outTotal(playerNumber: number): number {
+    let total = 0;
+    for (let i = 10; i <= 18; i++) {
+      total += this.userData['player' + playerNumber].scores['hole' + i];
+    }
+    return total;
+  }
+
 
 }

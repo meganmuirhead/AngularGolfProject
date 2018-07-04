@@ -50,7 +50,7 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
-    AngularFireDatabaseModule,
+    AngularFireDatabaseModule
     // AngularFirestoreCollection
   ],
   providers: [CourseService],
